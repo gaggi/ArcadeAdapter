@@ -1,0 +1,480 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              RetroAdapterV2.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              RetroAdapterV2.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+usbTxBuf            0xb               usbdrv.o
+usbTxStatus1        0xc               usbdrv.o
+hidNumReports       0x1               RetroAdapterV2.o
+idleRate            0x1               RetroAdapterV2.o
+reportBufferAddress
+                    0x2               RetroAdapterV2.o
+usbDeviceAddr       0x1               usbdrv.o
+reportBufferLength  0x1               RetroAdapterV2.o
+usbRxToken          0x1               usbdrv.o
+usbInputBufOffset   0x1               usbdrv.o
+usbDescriptorStringDeviceAddress
+                    0x2               RetroAdapterV2.o
+hidMode             0x1               RetroAdapterV2.o
+usbMsgPtr           0x2               usbdrv.o
+usbRxLen            0x1               usbdrv.o
+hidReportDescriptorAddress
+                    0x2               RetroAdapterV2.o
+hidReportDescriptorLength
+                    0x2               RetroAdapterV2.o
+usbNewDeviceAddr    0x1               usbdrv.o
+usbDescriptorStringDeviceLength
+                    0x2               RetroAdapterV2.o
+usbCurrentTok       0x1               usbdrv.o
+usbConfiguration    0x1               usbdrv.o
+usbRxBuf            0x16              usbdrv.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+LOAD RetroAdapterV2.o
+LOAD direct.o
+LOAD usbdrv.o
+LOAD usbdrvasm.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xb46
+ *(.vectors)
+ .vectors       0x00000000       0x68 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000068       0x72 RetroAdapterV2.o
+                0x00000086                usbDescriptorDeviceJoystick
+                0x00000098                usbHidReportDescriptor1P
+                0x000000ca                hat_lut
+                0x00000068                usbDescriptorStringDeviceDefault
+ .progmem.data  0x000000da       0x10 usbdrv.o
+                0x000000da                usbDescriptorString0
+                0x000000de                usbDescriptorStringVendor
+                0x000000ea                . = ALIGN (0x2)
+                0x000000ea                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000ea        0x0 linker stubs
+ *(.trampolines*)
+                0x000000ea                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000ea                __ctors_start = .
+ *(.ctors)
+                0x000000ea                __ctors_end = .
+                0x000000ea                __dtors_start = .
+ *(.dtors)
+                0x000000ea                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000ea        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x000000ea                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000ea        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000f6       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x000000f6                __do_copy_data
+ .init4         0x0000010c       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000010c                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000011c        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ *(.init9)
+ *(.text)
+ .text          0x00000124        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+                0x00000124                __vector_22
+                0x00000124                __vector_24
+                0x00000124                __vector_12
+                0x00000124                __bad_interrupt
+                0x00000124                __vector_6
+                0x00000124                __vector_3
+                0x00000124                __vector_23
+                0x00000124                __vector_25
+                0x00000124                __vector_11
+                0x00000124                __vector_13
+                0x00000124                __vector_17
+                0x00000124                __vector_19
+                0x00000124                __vector_7
+                0x00000124                __vector_5
+                0x00000124                __vector_4
+                0x00000124                __vector_9
+                0x00000124                __vector_2
+                0x00000124                __vector_21
+                0x00000124                __vector_15
+                0x00000124                __vector_8
+                0x00000124                __vector_14
+                0x00000124                __vector_10
+                0x00000124                __vector_16
+                0x00000124                __vector_18
+                0x00000124                __vector_20
+ .text          0x00000128      0x340 RetroAdapterV2.o
+                0x000002a2                RemapController
+                0x00000226                usbFunctionDescriptor
+                0x00000128                HardwareInit
+                0x000001da                usbFunctionSetup
+                0x000003a6                ReadController
+                0x000003cc                main
+                0x0000013a                SetHIDMode
+ .text          0x00000468      0x16c direct.o
+                0x00000468                ReadAll
+ .text          0x000005d4      0x2fa usbdrv.o
+                0x000005f8                usbPoll
+                0x0000087a                usbSetInterrupt
+                0x000005d4                usbInit
+ .text          0x000008ce      0x274 usbdrvasm.o
+                0x00000900                __vector_1
+                0x000008ce                usbCrc16
+                0x000008f8                usbCrc16Append
+ .text          0x00000b42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000b42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000b42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000b42                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00000b42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000b42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000b42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000b42                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000b42        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000b42                exit
+                0x00000b42                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000b42        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000b46                _etext = .
+
+.data           0x00800100       0x24 load address 0x00000b46
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ .data          0x00800100       0x22 RetroAdapterV2.o
+                0x00800100                usbDescriptorConfiguration
+ .data          0x00800122        0x0 direct.o
+ .data          0x00800122        0x2 usbdrv.o
+                0x00800122                usbTxLen
+ .data          0x00800124        0x0 usbdrvasm.o
+ .data          0x00800124        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800124        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800124        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800124                . = ALIGN (0x2)
+                0x00800124                _edata = .
+                0x00800124                PROVIDE (__data_end, .)
+
+.bss            0x00800124       0x4e
+                0x00800124                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800124        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm168.o
+ .bss           0x00800124        0x9 RetroAdapterV2.o
+ .bss           0x0080012d        0x0 direct.o
+ .bss           0x0080012d        0x1 usbdrv.o
+ .bss           0x0080012e        0x0 usbdrvasm.o
+ .bss           0x0080012e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080012e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080012e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080012e        0xe RetroAdapterV2.o
+                0x0080012e                hidNumReports
+                0x0080012f                idleRate
+                0x00800130                reportBufferAddress
+                0x00800132                reportBufferLength
+                0x00800133                usbDescriptorStringDeviceAddress
+                0x00800135                hidMode
+                0x00800136                hidReportDescriptorAddress
+                0x00800138                hidReportDescriptorLength
+                0x0080013a                usbDescriptorStringDeviceLength
+ COMMON         0x0080013c       0x36 usbdrv.o
+                0x0080013c                usbTxBuf
+                0x00800147                usbTxStatus1
+                0x00800153                usbDeviceAddr
+                0x00800154                usbRxToken
+                0x00800155                usbInputBufOffset
+                0x00800156                usbMsgPtr
+                0x00800158                usbRxLen
+                0x00800159                usbNewDeviceAddr
+                0x0080015a                usbCurrentTok
+                0x0080015b                usbConfiguration
+                0x0080015c                usbRxBuf
+                0x00800172                PROVIDE (__bss_end, .)
+                0x00000b46                __data_load_start = LOADADDR (.data)
+                0x00000b6a                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800172        0x0
+                0x00800172                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800172                PROVIDE (__noinit_end, .)
+                0x00800172                _end = .
+                0x00800172                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000       0x80
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 RetroAdapterV2.o
+ .debug_aranges
+                0x00000020       0x20 direct.o
+ .debug_aranges
+                0x00000040       0x20 usbdrv.o
+ .debug_aranges
+                0x00000060       0x20 usbdrvasm.o
+
+.debug_pubnames
+                0x00000000      0x357
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000      0x1fe RetroAdapterV2.o
+ .debug_pubnames
+                0x000001fe       0x1e direct.o
+ .debug_pubnames
+                0x0000021c      0x13b usbdrv.o
+
+.debug_info     0x00000000      0xf57
+ *(.debug_info)
+ .debug_info    0x00000000      0x5ca RetroAdapterV2.o
+ .debug_info    0x000005ca       0xe7 direct.o
+ .debug_info    0x000006b1      0x83f usbdrv.o
+ .debug_info    0x00000ef0       0x67 usbdrvasm.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x5df
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x291 RetroAdapterV2.o
+ .debug_abbrev  0x00000291       0x91 direct.o
+ .debug_abbrev  0x00000322      0x2a9 usbdrv.o
+ .debug_abbrev  0x000005cb       0x14 usbdrvasm.o
+
+.debug_line     0x00000000      0xb00
+ *(.debug_line)
+ .debug_line    0x00000000      0x490 RetroAdapterV2.o
+ .debug_line    0x00000490      0x11e direct.o
+ .debug_line    0x000005ae      0x3b4 usbdrv.o
+ .debug_line    0x00000962      0x19e usbdrvasm.o
+
+.debug_frame    0x00000000       0xe0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x80 RetroAdapterV2.o
+ .debug_frame   0x00000080       0x20 direct.o
+ .debug_frame   0x000000a0       0x40 usbdrv.o
+
+.debug_str      0x00000000      0x61b
+ *(.debug_str)
+ .debug_str     0x00000000      0x37e RetroAdapterV2.o
+                                0x3c0 (size before relaxing)
+ .debug_str     0x0000037e       0x11 direct.o
+                                 0xd6 (size before relaxing)
+ .debug_str     0x0000038f      0x28c usbdrv.o
+                                0x3f5 (size before relaxing)
+
+.debug_loc      0x00000000      0x8b5
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x204 RetroAdapterV2.o
+ .debug_loc     0x00000204       0x28 direct.o
+ .debug_loc     0x0000022c      0x689 usbdrv.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(RetroAdapterV2.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0x108
+ .debug_ranges  0x00000000      0x108 usbdrv.o

@@ -1,0 +1,1 @@
+#define	HIDM_1P		0
