@@ -108,19 +108,14 @@ these macros are defined, the boot loader usees them.
 
 static inline void  bootLoaderInit(void)
 {
-	DDRD	&= ~(1<<6);		// DB9 Button 1 input
-    PORTD	|= (1<<6);		// pull up
-
-	DDRC	&= ~(1<<0);		// Neo Geo A input
-	PORTC	|= (1<<0);		// pull up
-    
+	DDRD	&= ~(1<<0);		// PD0 as input
+    PORTD	|= (1<<0);		// pull up
+   
 	_delay_us(10);  /* wait for levels to stabilize */
 }
 
-// Bootloader started if DB9 Button 1 or Neo Geo A held
-// TO-DO: test button A on Sega
-//#define bootLoaderCondition()   ( !(PIND & (1<<6)) || !(PINC & (1<<0)) )
-#define bootLoaderCondition()   (!(PIND & (1<<6)))
+// Bootloader started if PD0 (marked TXD on Arduino Pro Mini) is pulled Down 
+#define bootLoaderCondition()   (!(PIND & (1<<0)))
 
 #endif
 
