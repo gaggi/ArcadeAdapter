@@ -1,52 +1,13 @@
-/* Retro Adapter V2
+/* Arcade Adapter 
  * 
- * Target: ATTiny168 16MHz
+ * Target: Arduino Pro Mini 16MHz
  *
  * Parts (c) 2009 MoJo aka Paul Qureshi
  * Parts (c) 2008 by OBJECTIVE DEVELOPMENT Software GmbH
  * License: GNU GPL v2
  */
 
-/* Button mapping (used to conform with Android and Windows simultaneously):
-    button 1:   bottom button (SNES B, PSX Cross, NegCon B, NES B, NeoGeo A, Genesis A, Gamecube A, N64 B, PCE II)
-    button 2:   right button (SNES A, PSX Circle, NegCon A, NES A, Neogeo B, Genesis B, Gamecube X, N64 A, PCE I)
-    button 4:   left button (SNES Y, PSX Square, NeoGeo C, Genesis C, Gamecube B, N64 Yellow Down, PCE III), 
-    button 5:   upper button (SNES X, PSX Triangle, NeoGeo D, Genesis X, Gamecube Y, N64 Yellow Up, PCE IV)
-    button 7:   Left Shoulder (SNES L, PSX L1, Genesis Y, Gamecube L, N64 L, PCE V)
-    button 8:   Right Shoulder (SNES R, PSX R1 Genesis Z, Gamecube R, N64 R, PCE VI)
-    button 9:   Misc 1 (PSX L2, N64 Yellow Left, Saturn L), 
-    button 10:  Misc 2 (PSX R2, N64 Yellow Right, Saturn R),
-    button 11:  Select
-    button 12:  Start (PC Engine Play, Genesis Mode)
-    button 14:  Misc 3 (PSX L3, N64 Z, Gamecube Z) 
-    button 15:  Misc 4 (PSX R3)
 
-    Analog:
-    Left Joystick: x,y
-    Right Joystick: z,Rz
-    
-    NegCon mode:
-    Steering: x
-    Button I: z
-    Button II: "Accelerator" axis
-    Button L: "Brake axis"
-*/
-
-/*
-Updated bitmap used in all current controller subroutines:
-b1	bit 0	bottom button 
-	bit 1	right button 
-	bit 2	left button  
-	bit 3	upper button 
-	bit 4	L2
-	bit 5	R2
-	bit 6	L1
-	bit 7	R1
-b2	bit 0	Select
-	bit 1	Start 
-	bit 2	L3
-	bit 3	R3
-*/
 
 #include <avr/io.h>
 #include <avr/interrupt.h>  /* for sei() */

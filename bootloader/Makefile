@@ -38,7 +38,7 @@ FUSEL = 0xEF
 
 ###############################################################################
 
-AVRDUDE = avrdude -c stk500v2 -P avrdoper -p $(DEVICE)
+AVRDUDE = avrdude -c stk500v2 -P COM5 -p $(DEVICE)
 
 LDFLAGS += -Wl,--section-start=.text=$(BOOTLOADER_ADDRESS)
 
